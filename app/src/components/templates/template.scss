@@ -1,0 +1,251 @@
+@import '../../colorPack.scss';
+
+
+.Welcome-container{
+    background-color: $white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .inner-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        .welcome-text {
+            justify-content: center;
+            font-size: 4rem;
+            font-family: cursive;
+            bottom: 10%;
+            position: relative;
+            color: $color-primeHv;
+            text-shadow: -5px -3px 0px #80008042;
+        
+        }
+        // copy code
+        .form-field {
+            display: block;
+            width: 100%;
+            padding: 8px 16px;
+            line-height: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            border-radius: 6px;
+            color: $gray;
+            border: 1px solid $gray;
+            background: $white;
+            transition: border .3s ease;
+            &::placeholder {
+                color: $whiteHv;
+            }
+            &:focus {
+                outline: none;
+                color: $gray;
+            }
+        }
+        
+        .form-group {
+            position: relative;
+            display: flex;
+            width: 100%;
+            & > span,
+            .form-field {
+                white-space: nowrap;
+                display: block;
+                &:not(:first-child):not(:last-child) {
+                    border-radius: 0;
+                }
+                &:first-child {
+                    border-radius: 6px 0 0 6px;
+                }
+                &:last-child {
+                    border-radius: 0 6px 6px 0;
+                }
+                &:not(:first-child) {
+                    margin-left: -1px;
+                }
+            }
+            .form-field {
+                position: relative;
+                z-index: 1;
+                flex: 1 1 auto;
+                width: 1%;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            & > span {
+                text-align: center;
+                padding: 8px 12px;
+                font-size: 14px;
+                line-height: 25px;
+                color: $white;
+                background: $color-prime;
+                border: 1px solid $color-primeHv;
+                transition: background .3s ease, border .3s ease, color .3s ease;
+            }
+            &:focus-within {
+                & > span {
+                    color: $white;
+                    background: $color-primeHv;
+                    border-color: $color-primeHv;
+                }
+            }
+        }
+        
+        html {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        * {
+            box-sizing: inherit;
+            &:before,
+            &:after {
+                box-sizing: inherit;
+            }
+        }
+        .input-container{
+            padding: 37px;
+            background: #e1dcdc80;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #3f51b5b3;
+            .or-line {
+                padding: 25px 0;
+                text-align: center;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .custom-shape-divider-top-1668932020 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .custom-shape-divider-top-1668932020 .shape-fill {
+        fill: #7D2AE8;
+    }
+}
+
+.header-container{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-prime;
+    color: white;
+}
+
+
+.home-container{
+    width: calc(100% - 5%);
+    height: calc(100% - 80px);
+    background-color: $white;
+    .classSpace {
+        margin: 10px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 50px;
+        align-items: center;
+        .month-change {
+            height: 80%;
+            width: 150px;
+            background: $whiteHv;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            .left,.right{
+                svg{
+                    height: 1.6em;
+                }
+                cursor: pointer;
+            }
+            .day{
+                font-size: 1.4em;
+                font-weight: 500;
+            }
+        }
+        .title-classSpace{
+            height: 100%;
+            width: 200px;
+            border-radius: 10px;
+            background: $whiteHv;
+            border: none;
+            color: $gray;
+            text-align: center;
+            font-size: 2rem;
+            &:focus-visible{
+                outline: unset;
+            }
+        }
+        .date-selected {
+            font-size: 1.5rem;
+            color: $gray;
+            background: $whiteHv;
+            border-radius: 10px;
+            height: 100%;
+            width: fit-content;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+    }
+}
+
+
+.schedule-container{
+    height: calc(100% - 60px);
+    width: 100%;
+    .weeks-container {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        font-size: 1.8rem;
+        align-items: center;
+        background-color: $whiteHv;
+        .week{
+            background-color: $calendar-green;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 2px;
+        }
+    }
+    .weeks-container-row {
+        width: 100%;
+        background: blue;
+        height: calc(100% - 60px);
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        .week-row {
+            background: red;
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+}
+
+
+
