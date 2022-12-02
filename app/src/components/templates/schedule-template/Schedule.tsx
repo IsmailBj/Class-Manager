@@ -1,5 +1,6 @@
 import React from "react";
-
+import {faAdd} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon}  from "@fortawesome/react-fontawesome";
 const Schedule = () =>{
     return (
         <div className="schedule-container">
@@ -13,7 +14,9 @@ const Schedule = () =>{
                 <div className="week sunday">Sunday</div>
             </div>
             <div className="weeks-container-row">
-                <div className="week-row monday"></div>
+                <div className="week-row monday">
+                    <div className="week-row add-one"><FontAwesomeIcon icon={faAdd} /></div>
+                </div>
                 <div className="week-row tuesday"></div>
                 <div className="week-row wednesday"></div>
                 <div className="week-row thursday"></div>
